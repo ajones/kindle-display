@@ -9,22 +9,12 @@
           "type": "vertical-stack",
           "cards": [
             {
-              "type": "weather-forecast",
-              "entity": "weather.forecast_castle",
-              "name": "Walnut Creek",
-              "show_current": true,
-              "show_forecast": true,
-              "forecast_type": "daily",
-              "forecast_slots": 1
+              "type": "markdown",
+              "content": "{% set w = 'weather.forecast_castle' %}{% set f = states('input_text.kindle_forecast_walnut_creek') | from_json(default={}) %}\n## Walnut Creek\n# {{ state_attr(w, 'temperature') | round(0) | int }}° {{ state_translated(w) }}\n### High {{ f.hi | default('–') }}° · Low {{ f.lo | default('–') }}°\n### Rain {{ 'none' if (f.rain | default(0) | float(0)) == 0 else (f.rain | string) ~ ' in' }}"
             },
             {
-              "type": "weather-forecast",
-              "entity": "weather.forecast_san_francisco",
-              "name": "San Francisco",
-              "show_current": true,
-              "show_forecast": true,
-              "forecast_type": "daily",
-              "forecast_slots": 1
+              "type": "markdown",
+              "content": "{% set w = 'weather.forecast_san_francisco' %}{% set f = states('input_text.kindle_forecast_san_francisco') | from_json(default={}) %}\n## San Francisco\n# {{ state_attr(w, 'temperature') | round(0) | int }}° {{ state_translated(w) }}\n### High {{ f.hi | default('–') }}° · Low {{ f.lo | default('–') }}°\n### Rain {{ 'none' if (f.rain | default(0) | float(0)) == 0 else (f.rain | string) ~ ' in' }}"
             }
           ]
         }
