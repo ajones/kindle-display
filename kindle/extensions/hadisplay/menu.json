@@ -1,0 +1,12 @@
+{
+  "items": [
+    {
+      "name": "HA Display",
+      "priority": 0,
+      "items": [
+        { "name": "Start", "priority": 1, "action": "./run.sh", "params": "start", "exitmenu": true },
+        { "name": "Stop", "priority": 2, "action": "./run.sh", "params": "stop", "exitmenu": true }
+      ]
+    }
+  ]
+}

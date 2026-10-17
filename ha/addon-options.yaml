@@ -1,0 +1,13 @@
+# Paste into: Settings > Apps > Lovelace Kindle Screensaver > Configuration (Edit in YAML)
+# Kindle Paperwhite 5 (11th gen): 1236x1648 portrait, 8-bit grayscale
+HA_BASE_URL: "http://192.168.86.244:8123"
+HA_SCREENSHOT_URL: "/kindle-display/0?kiosk"
+HA_ACCESS_TOKEN: "PASTE_LONG_LIVED_TOKEN_OF_kindle_USER"
+CRON_JOB: "*/5 * * * *"
+RENDERING_SCREEN_WIDTH: 1236
+RENDERING_SCREEN_HEIGHT: 1648
+SCALING: 2
+ROTATION: 0
+GRAYSCALE_DEPTH: 8
+COLOR_MODE: "GrayScale"
+IMAGE_FORMAT: "png"
