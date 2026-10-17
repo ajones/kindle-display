@@ -3,6 +3,7 @@
 URL=http://192.168.86.244:5000/
 INTERVAL=60      # seconds between refreshes
 FULL_EVERY=30    # full black/white flash every N draws to clear ghosting
+DIR=/mnt/us/extensions/hadisplay
 PID=/tmp/hadisplay.pid
 
 stop_loop() {
@@ -13,31 +14,35 @@ stop_loop() {
 case "$1" in
 start)
   stop_loop
+  # Own session, so the loop survives KUAL exiting and the UI stopping.
+  setsid "$DIR/run.sh" loop </dev/null >/dev/null 2>&1 &
+  ;;
+loop)
+  echo $$ > $PID
+  exec >"$DIR/log.txt" 2>&1
+  set -x
   lipc-set-prop com.lab126.powerd preventScreenSaver 1
   # Stop the Kindle UI so the library can't redraw over the image.
   # To get the normal Kindle back, hold the power button to restart it.
-  (
-    exec >/mnt/us/extensions/hadisplay/log.txt 2>&1
-    set -x
-    sleep 2   # let KUAL finish before pulling the UI out from under it
-    stop lab126_gui
-    sleep 3
-    n=0
-    while :; do
-      # Wait up to 60s for Wi-Fi in case it dropped with the UI.
-      i=0
-      while [ "$(lipc-get-prop com.lab126.wifid cmState)" != CONNECTED ] && [ $i -lt 30 ]; do
-        lipc-set-prop com.lab126.cmd wirelessEnable 1
-        sleep 2; i=$((i + 1))
-      done
-      if wget -q -T 20 -O /tmp/hadisplay.png "$URL"; then
-        if [ $((n % FULL_EVERY)) -eq 0 ]; then eips -f -g /tmp/hadisplay.png; else eips -g /tmp/hadisplay.png; fi
-        n=$((n + 1))
-      fi
-      sleep $INTERVAL
+  sleep 2
+  stop lab126_gui
+  sleep 3
+  sync
+  n=0
+  while :; do
+    # Wait up to 60s for Wi-Fi in case it dropped with the UI.
+    i=0
+    while [ "$(lipc-get-prop com.lab126.wifid cmState)" != CONNECTED ] && [ $i -lt 30 ]; do
+      lipc-set-prop com.lab126.cmd wirelessEnable 1
+      sleep 2; i=$((i + 1))
     done
-  ) &
-  echo $! > $PID
+    if wget -q -T 20 -O /tmp/hadisplay.png "$URL"; then
+      if [ $((n % FULL_EVERY)) -eq 0 ]; then eips -f -g /tmp/hadisplay.png; else eips -g /tmp/hadisplay.png; fi
+      n=$((n + 1))
+    fi
+    sync   # hard restarts otherwise lose the log
+    sleep $INTERVAL
+  done
   ;;
 stop)
   stop_loop
