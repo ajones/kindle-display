@@ -17,17 +17,26 @@ start)
   # Stop the Kindle UI so the library can't redraw over the image.
   # To get the normal Kindle back, hold the power button to restart it.
   (
+    exec >/mnt/us/extensions/hadisplay/log.txt 2>&1
+    set -x
     sleep 2   # let KUAL finish before pulling the UI out from under it
     stop lab126_gui
+    sleep 3
     n=0
     while :; do
+      # Wait up to 60s for Wi-Fi in case it dropped with the UI.
+      i=0
+      while [ "$(lipc-get-prop com.lab126.wifid cmState)" != CONNECTED ] && [ $i -lt 30 ]; do
+        lipc-set-prop com.lab126.cmd wirelessEnable 1
+        sleep 2; i=$((i + 1))
+      done
       if wget -q -T 20 -O /tmp/hadisplay.png "$URL"; then
         if [ $((n % FULL_EVERY)) -eq 0 ]; then eips -f -g /tmp/hadisplay.png; else eips -g /tmp/hadisplay.png; fi
         n=$((n + 1))
       fi
       sleep $INTERVAL
     done
-  ) >/dev/null 2>&1 &
+  ) &
   echo $! > $PID
   ;;
 stop)
