@@ -14,17 +14,18 @@ case "$1" in
 start)
   stop_loop
   lipc-set-prop com.lab126.powerd preventScreenSaver 1
-  # ponytail: draws over the stock UI instead of stopping it; tap screen to get the UI back.
-  # If UI elements keep reappearing between draws, stop lab126_gui here (and start it in stop).
+  # Stop the Kindle UI so the library can't redraw over the image.
+  # To get the normal Kindle back, hold the power button to restart it.
   (
+    sleep 2   # let KUAL finish before pulling the UI out from under it
+    stop lab126_gui
     n=0
     while :; do
-      sleep 3   # let KUAL's menu close before drawing
       if wget -q -T 20 -O /tmp/hadisplay.png "$URL"; then
         if [ $((n % FULL_EVERY)) -eq 0 ]; then eips -f -g /tmp/hadisplay.png; else eips -g /tmp/hadisplay.png; fi
         n=$((n + 1))
       fi
-      sleep $((INTERVAL - 3))
+      sleep $INTERVAL
     done
   ) >/dev/null 2>&1 &
   echo $! > $PID
@@ -32,5 +33,6 @@ start)
 stop)
   stop_loop
   lipc-set-prop com.lab126.powerd preventScreenSaver 0
+  start lab126_gui
   ;;
 esac
