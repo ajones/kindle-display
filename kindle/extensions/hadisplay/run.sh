@@ -1,8 +1,8 @@
 #!/bin/sh
 # Shows the Home Assistant Kindle render full-screen, refreshing on a timer.
 URL=http://192.168.86.244:5000/
-INTERVAL=300     # seconds between refreshes
-FULL_EVERY=6     # full black/white flash every N draws to clear ghosting
+INTERVAL=60      # seconds between refreshes
+FULL_EVERY=30    # full black/white flash every N draws to clear ghosting
 PID=/tmp/hadisplay.pid
 
 stop_loop() {
