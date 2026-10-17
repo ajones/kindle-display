@@ -1,27 +1,61 @@
 {
   "alias": "Raven - Kindle forecast cache",
-  "description": "Stores today's high/low/rain per city in input_text helpers for the Kindle dashboard.",
+  "description": "Stores today's high/low (Met.no) and rain chance (NWS, max of today+tonight) per city for the Kindle dashboard.",
   "triggers": [
-    { "trigger": "time_pattern", "minutes": "/30" },
-    { "trigger": "homeassistant", "event": "start" }
+    {
+      "trigger": "time_pattern",
+      "minutes": "/30"
+    },
+    {
+      "trigger": "homeassistant",
+      "event": "start"
+    }
   ],
   "conditions": [],
   "actions": [
     {
       "action": "weather.get_forecasts",
-      "data": { "type": "daily" },
-      "target": { "entity_id": ["weather.forecast_castle", "weather.forecast_san_francisco"] },
+      "data": {
+        "type": "daily"
+      },
+      "target": {
+        "entity_id": [
+          "weather.forecast_castle",
+          "weather.forecast_san_francisco"
+        ]
+      },
       "response_variable": "f"
     },
     {
-      "action": "input_text.set_value",
-      "target": { "entity_id": "input_text.kindle_forecast_walnut_creek" },
-      "data": { "value": "{% set d = f['weather.forecast_castle'].forecast[0] %}{{ {'hi': d.temperature, 'lo': d.templow, 'rain': d.precipitation} | to_json }}" }
+      "action": "weather.get_forecasts",
+      "data": {
+        "type": "twice_daily"
+      },
+      "target": {
+        "entity_id": [
+          "weather.nws_37_872472_122_059164_ltrc1",
+          "weather.nws_37_7749_122_4194_sfoc1"
+        ]
+      },
+      "response_variable": "n"
     },
     {
       "action": "input_text.set_value",
-      "target": { "entity_id": "input_text.kindle_forecast_san_francisco" },
-      "data": { "value": "{% set d = f['weather.forecast_san_francisco'].forecast[0] %}{{ {'hi': d.temperature, 'lo': d.templow, 'rain': d.precipitation} | to_json }}" }
+      "target": {
+        "entity_id": "input_text.kindle_forecast_walnut_creek"
+      },
+      "data": {
+        "value": "{% set d = f['weather.forecast_castle'].forecast[0] %}{% set p = n['weather.nws_37_872472_122_059164_ltrc1'].forecast[0:2] | map(attribute='precipitation_probability') | map('int', 0) | max %}{{ {'hi': d.temperature, 'lo': d.templow, 'rain': p} | to_json }}"
+      }
+    },
+    {
+      "action": "input_text.set_value",
+      "target": {
+        "entity_id": "input_text.kindle_forecast_san_francisco"
+      },
+      "data": {
+        "value": "{% set d = f['weather.forecast_san_francisco'].forecast[0] %}{% set p = n['weather.nws_37_7749_122_4194_sfoc1'].forecast[0:2] | map(attribute='precipitation_probability') | map('int', 0) | max %}{{ {'hi': d.temperature, 'lo': d.templow, 'rain': p} | to_json }}"
+      }
     }
   ],
   "mode": "single"
