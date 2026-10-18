@@ -1,0 +1,8 @@
+{
+  "alias": "Raven - Kindle BART refresh",
+  "description": "Polls the BART next-train scrape sensor every minute for the Kindle dashboard.",
+  "triggers": [{ "trigger": "time_pattern", "minutes": "*" }],
+  "conditions": [],
+  "actions": [{ "action": "homeassistant.update_entity", "target": { "entity_id": "sensor.bart_walnut_creek_next_to_sfo" } }],
+  "mode": "single"
+}

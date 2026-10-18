@@ -10,20 +10,13 @@
           "cards": [
             {
               "type": "markdown",
-              "content": "<center><h1>{{ now().strftime('%-I:%M %p') }}</h1><h2>{{ now().strftime('%A, %B %-d') }}</h2>{% set b = states('input_text.kindle_battery') | from_json(default={}) %}{% if b.level is defined %}<h3>{{ '⚡' if b.charging else '🔋' }} {{ b.level }}%</h3>{% endif %}</center>"
-            },
-            {
-              "type": "horizontal-stack",
-              "cards": [
-                {
-                  "type": "markdown",
-                  "content": "{% set w = 'weather.forecast_san_francisco' %}{% set f = states('input_text.kindle_forecast_san_francisco') | from_json(default={}) %}\n## San Francisco\n# {{ f.hi | default(\"–\") }}° / {{ f.lo | default(\"–\") }}°\n### {{ state_translated(w) }}\n### 🌧️ {{ f.rain | default('–') }}%"
-                },
-                {
-                  "type": "markdown",
-                  "content": "{% set w = 'weather.forecast_castle' %}{% set f = states('input_text.kindle_forecast_walnut_creek') | from_json(default={}) %}\n## Walnut Creek\n# {{ f.hi | default(\"–\") }}° / {{ f.lo | default(\"–\") }}°\n### {{ state_translated(w) }}\n### 🌧️ {{ f.rain | default('–') }}%"
+              "content": "{% macro city(name, w, key) %}{% set f = states('input_text.kindle_forecast_' ~ key) | from_json(default={}) %}<h3>{{ name }}</h3><h4>{{ f.hi | default('–') }}° / {{ f.lo | default('–') }}°</h4><p>{{ state_translated(w) }}</p><p>🌧️ {{ f.rain | default('–') }}%</p>{% endmacro %}\n{% set b = states('input_text.kindle_battery') | from_json(default={}) %}\n<h1>{{ now().strftime('%-I:%M %p') }}</h1>\n<h2>{{ now().strftime('%A, %B %-d') }}</h2>\n<table><tr><td>{{ city('San Francisco', 'weather.forecast_san_francisco', 'san_francisco') }}</td><td>{{ city('Walnut Creek', 'weather.forecast_castle', 'walnut_creek') }}</td></tr></table>\n{% set t = states.sensor.bart_walnut_creek_next_to_sfo %}{% if t and t.state | is_number %}{% set m = t.state | int %}<h5>NEXT TRAIN: SFO</h5><p class=\"train\">Departs: {{ (t.last_reported + timedelta(minutes=m)) | as_local | as_timestamp | timestamp_custom('%-I:%M %p') }} ({{ 'leaving now' if m == 0 else 'in ' ~ m ~ ' min' }})</p>{% endif %}\n<h6>{% if b.level is defined %}{{ '⚡' if b.charging else '🔋' }} {{ b.level }}% · {% endif %}Updated {{ now().strftime('%-I:%M %p') }}</h6>\n",
+              "card_mod": {
+                "style": {
+                  ".": "/* The renderer zooms the page by SCALING (3), so one screen = 100vh / 3. Change with SCALING. */\nha-card { height: calc(100vh / 3) !important; box-sizing: border-box; padding: 8px; border: none; border-radius: 0; background: #fff; color: #000; position: relative; }\n",
+                  "ha-markdown$": "h1, h2, h3, h4, h6, p { margin: 0; color: #000; }\nh1 { font-size: 5.5em; line-height: 1.05; text-align: center; white-space: nowrap; margin-top: 8px; }\nh2 { font-size: 1.5em; text-align: center; margin: 4px 0 16px; }\ntable { width: 100%; border-collapse: separate !important; border-spacing: 8px; margin: 0 -8px; width: calc(100% + 16px); }\ntd { width: 50%; vertical-align: top; border: 1px solid #999 !important; border-radius: 12px; padding: 12px 16px; }\ntd h3 { font-size: 1.4em; margin-bottom: 10px; }\ntd h4 { font-size: 2.2em; margin-bottom: 8px; }\ntd p { font-size: 1.2em; font-weight: bold; margin-bottom: 6px; }\nh6 { position: absolute; left: 8px; bottom: 8px; font-size: 1.1em; }\nh5 { font-size: 1.4em; margin: 12px 0 4px; letter-spacing: 0.05em; }\nh5 + p { font-size: 1.6em; font-weight: bold; margin: 0; }\n"
                 }
-              ]
+              }
             }
           ]
         }
