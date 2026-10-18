@@ -263,7 +263,6 @@
 - Fix cars or build houses?
 - Be president or own a sports team?
 - Win a spelling bee or a science fair?
-- Kids teach parents for a day or parents go to school for a day?
 - Work from home or in an office?
 - Invent a new food or a new game?
 - Find a dinosaur bone or a sunken ship?
@@ -319,8 +318,6 @@
 - Change your name or change your hair color?
 - Apologize easily or forgive easily?
 - Secret talent or famous talent?
-- Switch places with a sibling or a parent for a day?
-- Be the parent for a day or the baby for a day?
 - Pick dinner every night or pick weekend plans?
 - Make the family rules for a day or skip chores for a week?
 - Family band or family sports team?
@@ -361,7 +358,6 @@
 - Giant among people or person among giants?
 - Hands for feet or feet for hands?
 - Only cartwheel or only crab walk?
-- Shrink your parents or grow your pets?
 - Dragon afraid of fire or fish that can't swim?
 - Toys that come alive or drawings that come alive?
 - Only eat foods starting with B or with P?
