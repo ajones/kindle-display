@@ -30,6 +30,9 @@ loop)
   sync
   n=0
   while :; do
+    # Frontlight off (repeated each pass in case powerd restores it).
+    lipc-set-prop com.lab126.powerd flIntensity 0
+    for b in /sys/class/backlight/*/brightness; do echo 0 > "$b"; done
     # Wait up to 60s for Wi-Fi in case it dropped with the UI.
     i=0
     while [ "$(lipc-get-prop com.lab126.wifid cmState)" != CONNECTED ] && [ $i -lt 30 ]; do
