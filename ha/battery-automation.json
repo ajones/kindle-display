@@ -1,0 +1,16 @@
+{
+  "alias": "Raven - Kindle battery from screensaver",
+  "description": "The Kindle screensaver app posts the Kindle's battery level here after each render.",
+  "triggers": [
+    { "trigger": "webhook", "webhook_id": "kindle_battery_ba6e2dc56417", "allowed_methods": ["POST"], "local_only": true }
+  ],
+  "conditions": [],
+  "actions": [
+    {
+      "action": "input_text.set_value",
+      "target": { "entity_id": "input_text.kindle_battery" },
+      "data": { "value": "{{ {'level': trigger.json.batteryLevel | int(0), 'charging': (trigger.json.isCharging | string | lower) in ['1', 'true', 'yes']} | to_json }}" }
+    }
+  ],
+  "mode": "queued"
+}

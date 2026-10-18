@@ -39,7 +39,8 @@ loop)
       lipc-set-prop com.lab126.cmd wirelessEnable 1
       sleep 2; i=$((i + 1))
     done
-    if wget -q -T 20 -O /tmp/hadisplay.png "$URL"; then
+    BATT="batteryLevel=$(lipc-get-prop com.lab126.powerd battLevel)&isCharging=$(lipc-get-prop com.lab126.powerd isCharging)"
+    if wget -q -T 20 -O /tmp/hadisplay.png "$URL?$BATT"; then
       if [ $((n % FULL_EVERY)) -eq 0 ]; then eips -f -g /tmp/hadisplay.png; else eips -g /tmp/hadisplay.png; fi
       n=$((n + 1))
     fi

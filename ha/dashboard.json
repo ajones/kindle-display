@@ -10,7 +10,7 @@
           "cards": [
             {
               "type": "markdown",
-              "content": "<center><h1>{{ now().strftime('%-I:%M %p') }}</h1><h2>{{ now().strftime('%A, %B %-d') }}</h2></center>"
+              "content": "<center><h1>{{ now().strftime('%-I:%M %p') }}</h1><h2>{{ now().strftime('%A, %B %-d') }}</h2>{% set b = states('input_text.kindle_battery') | from_json(default={}) %}{% if b.level is defined %}<h3>{{ '⚡' if b.charging else '🔋' }} {{ b.level }}%</h3>{% endif %}</center>"
             },
             {
               "type": "horizontal-stack",
