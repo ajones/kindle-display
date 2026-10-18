@@ -1,0 +1,402 @@
+# Family Questions
+
+- Pizza every meal or never again?
+- Tacos or burritos?
+- Pancakes or waffles?
+- Ice cream or cake?
+- Sweet or salty snacks?
+- Breakfast for dinner or dinner for breakfast?
+- Only eat with chopsticks or only with a spoon?
+- Cookies or brownies?
+- Chocolate or vanilla?
+- Give up cheese or give up chocolate?
+- Hot cocoa or lemonade?
+- Cook every meal or wash every dish?
+- Spicy food forever or bland food forever?
+- Popcorn or candy at the movies?
+- Fries or onion rings?
+- Peanut butter or jelly, but not both?
+- Cereal with milk or dry?
+- Soup or salad?
+- Pie or cake for your birthday?
+- Never eat dessert or never eat candy?
+- Eat a cricket or eat a crayon?
+- Only eat green food or only orange food?
+- Mac and cheese or spaghetti?
+- Pick the restaurant or pick the movie?
+- Fruit snacks or real fruit?
+- Donuts or muffins?
+- Pickles or olives?
+- Burgers or hot dogs?
+- Grow your own food or catch your own fish?
+- Drink only water or only milk?
+- Try every ice cream flavor or every kind of candy?
+- Dessert first or dessert last?
+- Free pizza for life or free ice cream for life?
+- Grilled cheese or PB&J?
+- Watermelon or strawberries?
+- Smoothie or milkshake?
+- Run a bakery or a food truck?
+- Cupcakes or cookies?
+- Popsicles or snow cones?
+- Home-cooked meal or restaurant meal?
+- Pet dragon or pet unicorn?
+- Dogs or cats?
+- Talk to animals or speak every language?
+- Ride an elephant or swim with dolphins?
+- Tiny elephant or giant hamster?
+- Be a bird or a fish?
+- Pet penguin or pet monkey?
+- Have a tail or have wings?
+- Owl or eagle?
+- Raise goats or raise chickens?
+- Fast as a cheetah or strong as a gorilla?
+- Zoo or aquarium?
+- A pet that talks or a pet that never gets old?
+- Be a lion or a wolf?
+- Pet octopus or pet parrot?
+- Hold a snake or hold a spider?
+- Sleep all winter like a bear or standing up like a horse?
+- Breathe underwater or fly like a bird?
+- Turtle or rabbit?
+- Grow whiskers or grow a beak?
+- Pet sloth or pet koala?
+- Ride a horse or ride a camel?
+- Be friends with a shark or a bear?
+- Own a farm or own a zoo?
+- Robot dog or real dog?
+- Be a butterfly or a bee?
+- Giraffe neck or kangaroo legs?
+- Be a house cat or a house dog?
+- Pet dinosaur or pet woolly mammoth?
+- See a whale or a bald eagle in the wild?
+- Live with penguins or polar bears?
+- Elephant's memory or owl's eyesight?
+- Be a hummingbird or a hawk?
+- Pet goldfish or pet hamster?
+- Glow like a firefly or change color like a chameleon?
+- Walk 10 dogs or brush 10 cats?
+- Name every animal or discover a new one?
+- Swim with sea turtles or walk with penguins?
+- Pet fox or pet raccoon?
+- Squirrel or chipmunk?
+- Read minds or be invisible?
+- Fly or teleport?
+- Super strength or super speed?
+- Freeze time or rewind time?
+- Control the weather or talk to plants?
+- See the future or see the past?
+- Never sleep or never eat?
+- Breathe underwater or breathe in space?
+- Shrink to ant size or grow to giant size?
+- X-ray vision or night vision?
+- Shape-shift or clone yourself?
+- Never get tired or never get sick?
+- Know every fact or learn any skill instantly?
+- Jump over houses or walk through walls?
+- Heal others or make plants grow instantly?
+- Control fire or control water?
+- Move things with your mind or talk to computers?
+- Super hearing or super smell?
+- Stop the rain or summon snow?
+- Pause your life or skip ahead a year?
+- Magic carpet or flying car?
+- Be a superhero or a wizard?
+- Magic wand or genie lamp?
+- Three wishes now or one wish every year?
+- Talk to aliens or talk to dinosaurs?
+- Bounce like a ball or stretch like rubber?
+- Glow in the dark or see in the dark?
+- Always know the time or always know the way?
+- Never get lost or never lose anything?
+- Instantly clean your room or instantly finish homework?
+- Have a sidekick or be a sidekick?
+- Hero with a cape or hero with a mask?
+- Climb walls like a spider or swing like a monkey?
+- Remember everything or forget anything you want?
+- Make anyone laugh or calm anyone down?
+- Understand babies or understand pets?
+- Teleport once a day or fly anytime at bike speed?
+- Live to 200 or have one superpower?
+- Strongest in the family or fastest?
+- Talk to trees or talk to the ocean?
+- Live in a treehouse or a houseboat?
+- Explore space or the deep ocean?
+- Beach or mountains?
+- Camping or hotel?
+- Visit the past or the future?
+- City or country?
+- Road trip or plane trip?
+- Visit every country or every planet?
+- Live in a castle or a spaceship?
+- Hot place or cold place?
+- Theme park or national park?
+- Live in an igloo or a desert tent?
+- Lighthouse or cabin in the woods?
+- Visit Paris or Tokyo?
+- Train ride or boat ride?
+- Live on the moon or under the sea?
+- Climb a mountain or explore a cave?
+- Stay home all summer or travel all summer?
+- Live in a giant shoe or a giant pumpkin?
+- Desert island or snowy cabin?
+- Hot air balloon or submarine?
+- Waterpark or amusement park?
+- See the pyramids or the Great Wall?
+- Sleep under the stars or in a fancy hotel?
+- Never leave your hometown or never come back?
+- Tiny house or giant mansion?
+- Rainforest or Arctic?
+- Ski or surf?
+- North Pole or South Pole?
+- Ride in a race car or a rocket?
+- Live on a farm or in a skyscraper?
+- Big city vacation or quiet lake vacation?
+- See the northern lights or a volcano?
+- Explore a jungle or a coral reef?
+- House made of candy or made of LEGO?
+- Secret room or secret slide in your house?
+- Backyard pool or backyard trampoline?
+- Swing set or zip line?
+- Live near the beach or near a theme park?
+- Corn maze or hayride?
+- Always 10 minutes early or 10 minutes late?
+- Morning person or night owl?
+- Sunrise or sunset?
+- Shower or bath?
+- Wake up early or sleep in?
+- Messy room or messy car?
+- Pajamas all day or fancy clothes all day?
+- Never wear socks or never wear shoes?
+- Always hot or always cold?
+- Rain or snow?
+- Read the book or watch the movie?
+- Text or call?
+- Clean the bathroom or do the laundry?
+- Mow the lawn or rake leaves?
+- Chores in the morning or at night?
+- Wash dishes or dry them?
+- Walk or bike?
+- Wake up to music or to an alarm?
+- No phone or no TV?
+- No internet for a month or no sweets for a month?
+- Big party or small get-together?
+- Plan everything or go with the flow?
+- Lots of friends or a few best friends?
+- Hugs or high fives?
+- Pen or pencil?
+- Window seat or aisle seat?
+- Top bunk or bottom bunk?
+- Window open or closed at night?
+- One giant blanket or lots of pillows?
+- Same outfit every day or never repeat one?
+- Hat or sunglasses?
+- Flip-flops or sneakers?
+- Always sing or always dance?
+- Only whisper or only shout?
+- Spring or fall?
+- Summer or winter?
+- Thunderstorm or snowstorm?
+- Sunny day or rainy day?
+- Endless summer or snow day every Friday?
+- Your birthday or the holidays?
+- No music or no movies?
+- Board games or video games?
+- Movie night or game night?
+- Cartoons or live action?
+- Comedy or adventure?
+- Act in a movie or direct one?
+- Sing on stage or dance on stage?
+- Piano or guitar?
+- Comics or chapter books?
+- Puzzles or LEGO?
+- Hide and seek or tag?
+- Win a game or learn a new one?
+- Cards or dice?
+- Watch sports or play sports?
+- Soccer or basketball?
+- Baseball or football?
+- Swimming or biking?
+- Roller coaster or Ferris wheel?
+- Live in a video game or a cartoon?
+- Famous singer or famous athlete?
+- Make a movie or make a video game?
+- Be in a band or on a sports team?
+- Magic tricks or juggling?
+- Paint or draw?
+- Build with clay or with blocks?
+- Fireworks or a parade?
+- Circus or concert?
+- Karaoke or charades?
+- Bowling or mini golf?
+- Go-karts or bumper cars?
+- One movie forever or one show forever?
+- Be a cartoon character or a video game character?
+- Always win or always have fun?
+- Chess or checkers?
+- Monopoly or Uno?
+- Build a fort or build a snowman?
+- Fly a kite or go sledding?
+- Playground or pool?
+- YouTuber or author?
+- Audiobook or paper book?
+- Be a teacher forever or a student forever?
+- Astronaut or deep-sea diver?
+- Doctor or vet?
+- Chef or baker?
+- Be the boss or work alone?
+- Inventor or explorer?
+- Pilot or ship captain?
+- Zookeeper or park ranger?
+- Math or reading?
+- Science or art?
+- Recess or lunch?
+- Field trip to a museum or a farm?
+- Homework every night or school on Saturday?
+- Longer summer break or shorter school days?
+- Learn to code or learn to cook?
+- Learn an instrument or a new language?
+- Famous or rich?
+- Firefighter or police officer?
+- Run a toy store or a candy store?
+- Write a book or paint a mural?
+- Fix cars or build houses?
+- Be president or own a sports team?
+- Win a spelling bee or a science fair?
+- Kids teach parents for a day or parents go to school for a day?
+- Work from home or in an office?
+- Invent a new food or a new game?
+- Find a dinosaur bone or a sunken ship?
+- Famous chef or famous artist?
+- Study the stars or the ocean?
+- Write in cursive or type everything?
+- Class hamster or class fish?
+- Walk to school or ride the bus?
+- Front row or back row?
+- Robot teacher or robot classmate?
+- Fix anything or build anything?
+- Great at one thing or okay at everything?
+- Olympic gold medal or Nobel Prize?
+- Weather reporter or news anchor?
+- Dig for treasure or search for fossils?
+- Detective or scientist?
+- Funniest or smartest in the room?
+- Never embarrassed or never bored?
+- Famous for kindness or for talent?
+- More time or more money?
+- Know a secret or keep a secret?
+- Give a gift or get a gift?
+- Say what you think or think before you speak?
+- Be a kid forever or grow up right now?
+- Relive your best day or skip your worst day?
+- Big family or small family?
+- Oldest sibling or youngest?
+- Have a twin or be an only child?
+- Lead the group or follow the plan?
+- Try something new or do what you love?
+- Win alone or lose with friends?
+- Brave or wise?
+- Get a surprise party or plan one?
+- Know everyone's name or everyone's birthday?
+- Get a letter or a phone call?
+- Family dinner every night or a big trip once a year?
+- Really patient or really honest?
+- Meet your great-great-grandparents or your great-great-grandkids?
+- Remembered forever or happy today?
+- Help a friend or help a stranger?
+- Always tell the truth or always be kind?
+- Know your future or be surprised?
+- Perfect memory or perfect sense of humor?
+- Best player on a losing team or worst on a winning team?
+- Keep a diary or make a scrapbook?
+- A day with a grandparent or with a best friend?
+- Fix one thing in the world or understand everything in it?
+- Good at sports or good at music?
+- One big present or lots of small ones?
+- Celebrate your birthday at home or out?
+- Make your bed every day or never make it?
+- Honest best friend or funny best friend?
+- Change your name or change your hair color?
+- Apologize easily or forgive easily?
+- Secret talent or famous talent?
+- Spend a day as Mom or as Dad?
+- Switch places with a sibling or a parent for a day?
+- Be the parent for a day or the baby for a day?
+- Pick dinner every night or pick weekend plans?
+- Make the family rules for a day or skip chores for a week?
+- Family band or family sports team?
+- Family road trip or family staycation?
+- Get an allowance or earn money doing jobs?
+- Save your money or spend it?
+- Share your room or share your dessert?
+- Family motto or family mascot?
+- Spaghetti for hair or maple syrup for sweat?
+- Sneeze glitter or burp bubbles?
+- Talk like a pirate or a robot forever?
+- Nose that glows or ears that whistle?
+- Hop everywhere or skip everywhere?
+- Walk backward forever or talk backward forever?
+- Crayon fingers or gummy bear toes?
+- Size of a mouse or size of a house?
+- A world without colors or without sounds?
+- Laugh when you sneeze or sneeze when you laugh?
+- Clown nose forever or clown shoes forever?
+- Pet cloud or talking pet rock?
+- Ride a giant snail or a tiny horse?
+- Phone shaped like a banana or a shoe?
+- Only speak in rhymes or only in song?
+- Covered in fur or covered in scales?
+- Rain gumballs or snow marshmallows?
+- Talking car or flying bike?
+- Wizard or pirate?
+- Knight or ninja?
+- Mermaid or centaur?
+- Robot butler or robot chef?
+- Live in a fairy tale or a sci-fi movie?
+- Time machine or teleporter?
+- Slide instead of stairs or a fire pole?
+- Trampoline bed or hammock bed?
+- Chocolate river or lemonade waterfall?
+- Cape every day or crown every day?
+- Door to anywhere or window to anywhere?
+- Giant among people or person among giants?
+- Hands for feet or feet for hands?
+- Only cartwheel or only crab walk?
+- Shrink your parents or grow your pets?
+- Dragon afraid of fire or fish that can't swim?
+- Toys that come alive or drawings that come alive?
+- Only eat foods starting with B or with P?
+- Your own island or your own planet?
+- Live in a bubble or a snow globe?
+- Ride a dragon or ride a whale?
+- Dinosaur teacher or parrot teacher?
+- Bathtub of jelly or pool of pudding?
+- Wear a helmet forever or a life jacket forever?
+- Head the size of a grape or a watermelon?
+- Hiccup forever or a song always stuck in your head?
+- Squeaky shoes or squeaky voice?
+- House that moves or house that talks?
+- Superhero's pet or wizard's owl?
+- Birthday every day or holiday every day?
+- Blue grass or green sky?
+- Robot arm or jetpack?
+- Find a dragon egg or a treasure map?
+- First person on Mars or first to find Atlantis?
+- Snowball fight or water balloon fight?
+- Pillow fight or tickle fight?
+- Make your own holiday or your own country?
+- Only travel by skateboard or pogo stick?
+- Own a candy factory or a toy factory?
+- Drawings come to life or writing comes true?
+- Ride to school on a dragon or a hot air balloon?
+- Castle with a moat or treehouse with a slide?
+- Sleep on a cloud or in a hammock?
+- Best friends with a robot or an alien?
+- Locked in a library or a candy store overnight?
+- Magic backpack or magic shoes?
+- Never need a haircut or never need a bath?
+- Snow in summer or warm days in winter?
+- Hold your breath for an hour or run all day without stopping?
+- Know every song or every joke?
+- Win a sandcastle contest or a snowman contest?
+- A day with your favorite character or your favorite author?
