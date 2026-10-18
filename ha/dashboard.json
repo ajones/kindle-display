@@ -17,11 +17,11 @@
               "cards": [
                 {
                   "type": "markdown",
-                  "content": "{% set w = 'weather.forecast_san_francisco' %}{% set f = states('input_text.kindle_forecast_san_francisco') | from_json(default={}) %}\n## San Francisco\n# {{ state_attr(w, 'temperature') | round(0) | int }}°\n### {{ state_translated(w) }}\n### H {{ f.hi | default('–') }}° · L {{ f.lo | default('–') }}°\n### 🌧️ {{ f.rain | default('–') }}%"
+                  "content": "{% set w = 'weather.forecast_san_francisco' %}{% set f = states('input_text.kindle_forecast_san_francisco') | from_json(default={}) %}\n## San Francisco\n# {{ f.hi | default(\"–\") }}° / {{ f.lo | default(\"–\") }}°\n### {{ state_translated(w) }}\n### 🌧️ {{ f.rain | default('–') }}%"
                 },
                 {
                   "type": "markdown",
-                  "content": "{% set w = 'weather.forecast_castle' %}{% set f = states('input_text.kindle_forecast_walnut_creek') | from_json(default={}) %}\n## Walnut Creek\n# {{ state_attr(w, 'temperature') | round(0) | int }}°\n### {{ state_translated(w) }}\n### H {{ f.hi | default('–') }}° · L {{ f.lo | default('–') }}°\n### 🌧️ {{ f.rain | default('–') }}%"
+                  "content": "{% set w = 'weather.forecast_castle' %}{% set f = states('input_text.kindle_forecast_walnut_creek') | from_json(default={}) %}\n## Walnut Creek\n# {{ f.hi | default(\"–\") }}° / {{ f.lo | default(\"–\") }}°\n### {{ state_translated(w) }}\n### 🌧️ {{ f.rain | default('–') }}%"
                 }
               ]
             }
