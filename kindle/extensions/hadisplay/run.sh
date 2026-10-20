@@ -1,10 +1,23 @@
 #!/bin/sh
 # Shows the Home Assistant Kindle render full-screen, refreshing on a timer.
 URL=http://192.168.86.244:5000/
-INTERVAL=60      # seconds between refreshes
+INTERVAL=120     # seconds between refreshes
+NIGHT_START=23   # no refreshes from 11 PM...
+NIGHT_END=6      # ...until 6 AM
+export TZ=PST8PDT,M3.2.0,M11.1.0   # don't trust the Kindle's own zone setting
 FULL_EVERY=30    # full black/white flash every N draws to clear ghosting
 DIR=/mnt/us/extensions/hadisplay
 PID=/tmp/hadisplay.pid
+
+# Sleep (suspended) for $1 seconds, woken by the RTC alarm.
+# Falls back to a plain sleep if the alarm can't be set or suspend fails.
+nap() {
+  set=0
+  for a in /sys/class/rtc/rtc*/wakealarm; do
+    echo 0 > "$a" 2>/dev/null && echo "+$1" > "$a" 2>/dev/null && set=1
+  done
+  if [ $set = 1 ] && echo mem > /sys/power/state; then :; else sleep "$1"; fi
+}
 
 stop_loop() {
   [ -f $PID ] && kill "$(cat $PID)" 2>/dev/null
@@ -45,7 +58,14 @@ loop)
       n=$((n + 1))
     fi
     sync   # hard restarts otherwise lose the log
-    sleep $INTERVAL
+    sleep 3   # let the e-ink finish drawing before suspending
+    h=$(date +%H); h=${h#0}
+    if [ $h -ge $NIGHT_START ] || [ $h -lt $NIGHT_END ]; then
+      m=$(date +%M); m=${m#0}
+      nap $(( ((NIGHT_END - h + 24) % 24) * 3600 - m * 60 ))
+    else
+      nap $INTERVAL
+    fi
   done
   ;;
 stop)
